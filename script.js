@@ -6,7 +6,7 @@ var specialAlpha = '!@#$%^&*';
 
 function generatePassword() {
   let passLength;
-  let password;
+  let password='';
   let allowedChars='';
   let userEntry = prompt("Enter length of password (between 8 and 128 characters)");
   userEntry=parseFloat(userEntry.trim())
@@ -38,6 +38,7 @@ function generatePassword() {
     for (let x=0; x<passLength; x++) {
       password+=allowedChars.charAt(randomNums[x]);
     }
+  console.log(password)
   return password
 }
 
